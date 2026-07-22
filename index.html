@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏨 Hotel System</h1>
+        <p class="subtitle">Create a new booking</p>
+
+        <form id="bookingForm">
+            <!-- Employee Dropdown (populated via API) -->
+            <div class="form-group">
+                <label for="employee_id">
+                    Employee Assigned <span class="required">*</span>
+                </label>
+                <select id="employee_id" name="employee_id" required>
+                    <option value="">-- Select Employee --</option>
+                </select>
+            </div>
+
+            <!-- Guest Name -->
+            <div class="form-group">
+                <label for="guest_name">
+                    Guest Name <span class="required">*</span>
+                </label>
+                <input type="text" id="guest_name" name="guest_name" 
+                       placeholder="e.g. John Smith" required>
+            </div>
+
+            <!-- Room Number -->
+            <div class="form-group">
+                <label for="room_number">
+                    Room Number <span class="required">*</span>
+                </label>
+                <input type="text" id="room_number" name="room_number" 
+                       placeholder="e.g. 101" required>
+            </div>
+
+            <!-- Check-in Date -->
+            <div class="form-group">
+                <label for="check_in">
+                    Check-in Date <span class="required">*</span>
+                </label>
+                <input type="date" id="check_in" name="check_in" required>
+            </div>
+
+            <!-- Check-out Date -->
+            <div class="form-group">
+                <label for="check_out">
+                    Check-out Date <span class="required">*</span>
+                </label>
+                <input type="date" id="check_out" name="check_out" required>
+            </div>
+
+            <!-- Status -->
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="status-select">
+                    <option value="confirmed">Confirmed</option>
+                    <option value="checked_in">Checked In</option>
+                    <option value="checked_out">Checked Out</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" class="btn-submit">
+                Create Booking
+            </button>
+        </form>
+
+        <!-- Result Message -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
